@@ -9,6 +9,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-l/YGBneBqhN8O1wJccjsUr/5MTp9XHf8z0WgA/C+oiO1KfOvDB8qWywSYiPmZufGh9v9lkWky8+tQDjKNoGBzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <style>
     /* Estilos adicionales para el formulario */
     .form-group label {
@@ -23,8 +25,10 @@
     
     <style>
       .carousel-img {
-        height: 150px;
+        height: 500px;
         object-fit: cover;
+        max-width: 100%;
+        height: auto;
       }
       
       /* Estilos para los botones de navegación del carousel */
@@ -40,13 +44,27 @@
       .slick-next:before {
         content: ">";
       }
+      @media (max-width: 500px) {
+        .slick-prev,
+        .slick-next {
+          width: 25px;
+          height: 25px;
+          z-index: 1;
+        }
+        .slick-prev {
+          left: 10px;
+        }
+        .slick-next {
+          right: 10px;
+        }
+      }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="index.html">
-            <img src="taxi-tierz-low-resolution-logo-color-on-transparent-background.png" width="100" height="60">
+            <img src="img/taxi-tierz-low-resolution-logo-color-on-transparent-background.png" width="100" height="60">
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -59,9 +77,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/servicios.html">Servicios</a>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link" href="/blog.html">Blog</a>
             </li>
+            -->
             <li class="nav-item">
                 <a class="nav-link" href="/contacto.html">Contacto</a>
             </li>
@@ -75,17 +95,17 @@
                 <h1 class="display-4">Bienvenido a Taxi Tierz</h1>
                 <p class="lead">Ofrecemos servicios de transporte de alta calidad y seguridad para nuestros clientes</p>
                 <a href="/contacto.html" class="btn btn-primary btn-lg d-none d-md-inline-block">Reservar ahora</a>
-                <a href="tel:6000000" class="btn btn-primary btn-lg d-md-none">Llamar ahora</a>
+                <a href="tel:643606699" class="btn btn-primary btn-lg d-md-none">Llamar ahora</a>
             </div>
         </div>
     </section>
     <div class="container">
         <div class="carousel">
-          <img src="https://via.placeholder.com/800x400/0066cc/ffffff?text=Imagen+1" class="carousel-img" alt="Imagen 1">
-          <img src="https://via.placeholder.com/800x400/9933cc/ffffff?text=Imagen+2" class="carousel-img" alt="Imagen 2">
-          <img src="https://via.placeholder.com/800x400/ff9933/ffffff?text=Imagen+3" class="carousel-img" alt="Imagen 3">
+          <img src="img/FOTO8.jpeg" class="carousel-img" alt="Imagen 1">
+          <img src="img/FOTO19.jpeg" class="carousel-img" alt="Imagen 2">
+          <img src="img/FOTO13EDIT.jpg" class="carousel-img" alt="Imagen 3">
         </div>
-      </div>
+    </div>
       
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -108,30 +128,37 @@
           <div class="row">
             <div class="col-md-6">
               <div class="card">
-                <a href="/servicios.html"><img src="img/viajero-taxi-camino-al-aeropuerto-mujer-joven-maleta-coche-amarillo-caracter-vector-turismo-femenino-aislado-transporte-taxi-camino-al-aeropuerto-ilustracion_80590-10658.avif" alt="Transporte al aeropuerto" class="card-img-top" alt="Traslados al aeropuerto"></a>
+                <a href="/servicios.html"><img src="img/FOTO4CUADRADA.jpeg" height="400px" class="card-img-top" alt="Traslados al aeropuerto"></a>
                 <div class="card-body">
                   <h5 class="card-title">Transporte al aeropuerto</h5>
                   <p class="card-text">Ofrecemos transporte al aeropuerto con chofer profesional y vehículos cómodos...</p>
                 </div>
               </div>
               <div class="card mt-3">
-                <a href="/servicios.html"><img src="img/4f1c8c_238262a723ef4cf381eb4638ab32a61e_mv2.webp" height="300px" class="card-img-top" alt="Traslados al aeropuerto"></a>
+                <a href="/servicios.html"><img src="img/FOTO6.jpeg" height="400px" class="card-img-top" alt="Traslados al aeropuerto"></a>
                 <div class="card-body">
                   <h5 class="card-title">Bodas</h5>
                   <p class="card-text">Hacemos que su día especial sea aún más memorable con nuestro servicio de transporte para bodas...</p>
                 </div>
               </div>
+              <div class="card mt-3">
+                <a href="/servicios.html"><img src="img/FOTO1.jpeg" height="400px" class="card-img-top" alt="Traslados al aeropuerto"></a>
+                <div class="card-body">
+                  <h5 class="card-title">Transporte adaptado para personas con discapacidad</h5>
+                  <p class="card-text">Transporte adaptado para personas con discapacidad. Vehículo cómodo, accesible, y adaptado, choferes profesionales y experiencia personalizada para cada pasajero. Viaje seguro y tranquilo...</p>
+                </div>
+              </div>
             </div>
             <div class="col-md-6">
                 <div class="card">
-                  <a href="/servicios.html"><img src="img/car-5440936_1280.png" height="300px" class="card-img-top" alt="Traslados al aeropuerto"></a>
+                  <a href="/servicios.html"><img src="img/FOTO5.jpeg" height="400px" class="card-img-top" alt="Traslados al aeropuerto"></a>
                   <div class="card-body">
                     <h5 class="card-title">Viajes largos</h5>
                     <p class="card-text">Le llevamos a su destino en cualquier lugar del país con nuestros vehículos seguros y confortables...</p>
                   </div>
                 </div>
                 <div class="card mt-3">
-                    <a href="/servicios.html"><img src="img/1000_F_535884015_RMxmZjg0C0gHDLQNiqFa3WI7ZasMhPE3.jpg" height="300px" class="card-img-top" alt="Traslados al aeropuerto"></a>
+                    <a href="/servicios.html"><img src="img/FOTO18.jpeg" height="400px" class="card-img-top" alt="Traslados al aeropuerto"></a>
                     <div class="card-body">
                       <h5 class="card-title">Recogida escolar</h5>
                       <p class="card-text">Proporcionamos transporte seguro y puntual para los estudiantes desde y hacia la escuela...</p>
@@ -158,15 +185,20 @@
       <div class="row">
         <div class="col-md-4">
           <h4>Taxi Tierz</h4>
-          <p>Teléfono: <a href="tel:[Número de teléfono]">[Número de teléfono]</a></p>
+          <p>Teléfono: <a href="tel:643 60 66 99">643 60 66 99</a></p>
+          <p>Email: <a href="mailto:taxitierz@gmail.com">TAXITIERZ@gmail.com</a></p>
         </div>
         <div class="col-md-4">
           <h4>Aviso Legal</h4>
-          <p>[Texto de aviso legal]</p>
+          <p><a href="/AvisoLegaTAXITIERZ.pdf" class="btn btn-primary btn-lg d-none d-md-inline-block">AVISO LEGAL</a></p>
+          <h4>Política de Cookies</h4>
+          <p>-</p>
         </div>
         <div class="col-md-4">
-          <h4>Política de Cookies</h4>
-          <p>[Texto de política de cookies]</p>
+          <div>
+            <h3>Formas de pago aceptadas:</h3>
+            <p>Pago en bizum, tarjeta de credito y efectivo<img class="payment-icon" src="img/logo-bizum-v2.png" alt="Pago en Bizum" style="height: 5em;"><img class="payment-icon" src="img/mastercardlogo.png" alt="Tarjeta de crédito" style="height: 4em;"><img class="payment-icon" src="img/visalogo.png" alt="Tarjeta de crédito" style="height: 3em;"><img class="payment-icon" src="img/efectivologo.png" alt="Efectivo"></p>
+          </div>
         </div>
       </div>
     </div>
